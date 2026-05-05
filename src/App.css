@@ -1,0 +1,6 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #0f52ba, #003366);
+}

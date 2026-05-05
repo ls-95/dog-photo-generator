@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./DogPhoto.css";
 
 function DogPhoto() {
-  const [photo, setPhoto] = useState();
+  const [photo, setPhoto] = useState(null);
   const fetchData = async () => {
     try {
       const response = await fetch("https://dog.ceo/api/breeds/image/random");
@@ -12,12 +12,28 @@ function DogPhoto() {
       console.log("Error fetching data:", error);
     }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const showNextPhoto = () => {
+    fetchData();
+  };
+
+  if (!photo) {
+    return <p>Loading a good boy... 🐕</p>;
+  }
   return (
-    <>
-      <h2>
+    <div className="dog-image-container">
+      <h1>
         Looking for a way to brighten your day? Dog photos might be the answer.
-      </h2>
-    </>
+      </h1>
+      <img src={photo.message} alt="A random photo of a dog" />
+      <div className="btn-next-container">
+        <button onClick={showNextPhoto}>Next Photo</button>
+      </div>
+    </div>
   );
 }
 
