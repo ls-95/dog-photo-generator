@@ -83,7 +83,7 @@ function DogPhoto() {
       </div>
       <hr />
       <div>
-        <p>Did you like the photos?</p>
+        <p>Did you like these photos?</p>
         <div>
           <button onClick={celebrate}>Yes!</button>
           <button onClick={rainEffect}>No..</button>
