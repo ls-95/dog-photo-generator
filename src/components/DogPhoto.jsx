@@ -22,7 +22,13 @@ function DogPhoto() {
     fetchData();
   };
 
+  const playSound = (fileName) => {
+    const audio = new Audio(`/${fileName}`);
+    audio.play();
+  };
+
   const celebrate = () => {
+    playSound("cheer.wav");
     const emoji = confetti.shapeFromText({ text: "🐶", scalar: 3 });
 
     confetti({
@@ -35,6 +41,7 @@ function DogPhoto() {
   };
 
   const rainEffect = () => {
+    playSound("trombone.wav");
     const emoji = confetti.shapeFromText({ text: "😭", scalar: 5 });
 
     var duration = 10 * 1000;
