@@ -71,7 +71,7 @@ function DogPhoto() {
   };
 
   if (!photo) {
-    return <p className="loading-text">Loading a good boy... 🐕</p>;
+    return <p>Loading a good boy... 🐕</p>;
   }
   return (
     <div className="dog-image-container">
@@ -81,6 +81,7 @@ function DogPhoto() {
       <div className="btn-next-container">
         <button onClick={showNextPhoto}>Next Photo</button>
       </div>
+      <hr />
       <div>
         <p>Did you like the photos?</p>
         <div>
