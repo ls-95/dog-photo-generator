@@ -26,9 +26,8 @@ function DogPhoto() {
   }
   return (
     <div className="dog-image-container">
-      <h1>
-        Looking for a way to brighten your day? Dog photos might be the answer.
-      </h1>
+      <h1>Looking for a way to brighten your day?</h1>
+      <h2>Dog photos might be the answer:</h2>
       <img src={photo.message} alt="A random photo of a dog" />
       <div className="btn-next-container">
         <button onClick={showNextPhoto}>Next Photo</button>
