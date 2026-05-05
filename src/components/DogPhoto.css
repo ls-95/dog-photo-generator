@@ -43,3 +43,9 @@ button:active {
   position: relative;
   top: 2px;
 }
+
+.loading-text {
+  margin: auto;
+  color: #fff;
+  font-size: 1.5em;
+}
