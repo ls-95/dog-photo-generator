@@ -1,0 +1,42 @@
+.registration {
+  max-width: 600px;
+  width: 100%;
+  margin: 5em auto;
+  background-image: linear-gradient(to left, #0f52ba, #003366);
+  padding: 3em;
+  border-radius: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px 8px rgba(0, 0, 105, 0.5);
+}
+
+form {
+  padding: 2em 1em;
+  color: #fff;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.label-div,
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-inputs {
+  text-align: left;
+}
+
+input {
+  padding: 1em 2em;
+  border-radius: 1em;
+  border: none;
+}
+
+.login-inquiry-container {
+  padding-top: 2em;
+}
