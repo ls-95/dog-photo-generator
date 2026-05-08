@@ -8,16 +8,16 @@ function Registration() {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    setPassword(e.target.value);
     e.preventDefault();
+    setPassword(e.target.value);
     const passwordRegex =
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-    const storedUsername = username.trim();
-    const storedPassword = password.trim();
-    if (passwordRegex.test(storedPassword)) {
-      localStorage.setItem("username", storedUsername);
+    const storeUsername = username.trim();
+    const storePassword = password.trim();
+    if (passwordRegex.test(storePassword)) {
+      localStorage.setItem("username", storeUsername);
       navigate("/login");
-      localStorage.setItem("password", storedPassword);
+      localStorage.setItem("password", storePassword);
     }
   };
   return (
