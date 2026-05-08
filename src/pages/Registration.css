@@ -27,6 +27,10 @@ form {
   justify-content: center;
 }
 
+.label-div label {
+  font-size: 1.25em;
+}
+
 .form-inputs {
   text-align: left;
 }
@@ -37,6 +41,26 @@ input {
   border: none;
 }
 
-.login-inquiry-container {
-  padding-top: 2em;
+.password-requirements-container {
+  margin: 3em 0 3em 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.password-requirements {
+  text-align: left;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+  position: relative;
+  bottom: 2px;
+}
+
+.nav-link:active {
+  position: relative;
+  top: 2px;
 }
