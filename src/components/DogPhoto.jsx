@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import "./DogPhoto.css";
+import { useNavigate } from "react-router-dom";
 
 function DogPhoto() {
   const [photo, setPhoto] = useState(null);
+  const navigate = useNavigate();
   const fetchData = async () => {
     try {
       const response = await fetch("https://dog.ceo/api/breeds/image/random");
@@ -95,6 +97,10 @@ function DogPhoto() {
           <button onClick={celebrate}>Yes!</button>
           <button onClick={rainEffect}>No..</button>
         </div>
+      </div>
+      <hr />
+      <div>
+        <button onClick={() => navigate("/")}>Logout</button>
       </div>
     </div>
   );
